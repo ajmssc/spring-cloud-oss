@@ -5,6 +5,15 @@ spring:
   application:
     name: web-server
 
+info:
+  description: Sample app
+  url: https://github.com/sample-app
+
+zuul:
+  routes:
+    google:
+      path: /google/**
+      url: http://www.google.com
 
 eureka:
   client:

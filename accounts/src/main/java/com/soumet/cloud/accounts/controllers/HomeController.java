@@ -1,4 +1,4 @@
-package com.soumet.cloud.accounts;
+package com.soumet.cloud.accounts.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

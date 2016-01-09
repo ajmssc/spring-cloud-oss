@@ -1,4 +1,4 @@
-package com.soumet.cloud.accounts;
+package com.soumet.cloud.accounts.dto;
 //
 //import javax.persistence.Column;
 //import javax.persistence.Entity;

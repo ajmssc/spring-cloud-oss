@@ -24,9 +24,16 @@
         <processorPath useClasspath="true" />
         <module name="accounts" />
         <module name="registration" />
+        <module name="test" />
         <module name="web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="accounts" target="1.6" />
+      <module name="registration" target="1.6" />
+      <module name="spring-cloud-oss" target="1.6" />
+      <module name="test" target="1.6" />
+      <module name="web" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>

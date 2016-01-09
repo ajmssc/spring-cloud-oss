@@ -1,5 +1,6 @@
-package com.soumet.cloud.accounts;
+package com.soumet.cloud.accounts.controllers;
 
+import com.soumet.cloud.accounts.dto.Account;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.logging.Logger;
@@ -28,7 +29,7 @@ public class AccountsController {
 	 * @param accountNumber
 	 *            A numeric, 9 digit account number.
 	 * @return The account if found.
-	 * @throws AccountNotFoundException
+	 * @throws com.soumet.cloud.accounts.exceptions.AccountNotFoundException
 	 *             If the number is not recognised.
 	 */
 	@RequestMapping("/{accountNumber}")

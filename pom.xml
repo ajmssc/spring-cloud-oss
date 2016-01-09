@@ -8,6 +8,7 @@
 		<module>accounts</module>
 		<module>web</module>
 		<module>registration</module>
+		<module>test</module>
 	</modules>
 	<packaging>pom</packaging>
 

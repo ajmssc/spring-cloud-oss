@@ -6,31 +6,33 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Enumeration;
+import java.util.logging.Logger;
 
-/**
- * Home page controller.
- * 
- * @author Paul Chapman
- */
+
 @Controller
 public class DataController {
+
+    final long version = Math.round(Math.random() * 1000);
+    protected Logger logger = Logger.getLogger(DataController.class.getName());
 
 	@RequestMapping("/")
 	@ResponseBody
 	public String home(HttpServletRequest request, HttpServletResponse response) {
-		return this + "::home";
+		return "More cool sh*t. Version " + version;
 	}
 
-	@RequestMapping("/1")
+	@RequestMapping("/status")
 	@ResponseBody
-	public String home1(HttpServletRequest request, HttpServletResponse response) {
-		return this + "::home1";
-	}
-
-	@RequestMapping("/2")
-	@ResponseBody
-	public String home2() {
-		return this + "::home2";
+	public String status(HttpServletRequest request, HttpServletResponse response) {
+        logger.warning("Call to status. version is " + version);
+        Enumeration<String> headers = request.getHeaderNames();
+        String data = "";
+//        while (headers.hasMoreElements()) {
+//            String header = headers.nextElement();
+//            data += header + " : " + request.getHeader(header) + "<BR>";
+//        }
+        return data + "<BR>Version " + version;
 	}
 
 }

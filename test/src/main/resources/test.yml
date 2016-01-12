@@ -9,5 +9,6 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
+      defaultZone: ${eureka-url:http://127.0.0.1:8761}/eureka/
     registerWithEureka: true
+

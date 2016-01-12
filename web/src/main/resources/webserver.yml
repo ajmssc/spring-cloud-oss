@@ -5,18 +5,32 @@ spring:
   application:
     name: web-server
 
+
+
 info:
   description: Sample app
   url: https://github.com/sample-app
 
 zuul:
+  ignoredServices: "*"
   routes:
-    google:
-      path: /google/**
-      url: http://www.google.com
+    accounts:
+      path: /accounts/**
+      serviceId: accounts-service
+    test:
+      path: /test/**
+      serviceId: test
+
+
+#    accounts:
+#      path: /api/v1/accounts/**
+#      serviceId: accounts-service
+#    riq:
+#      path: /api/v1/**
+#      url: http://app-staging.relateiq.com/api/v1
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
+      defaultZone: ${eureka-url:http://127.0.0.1:8761}/eureka/
     registerWithEureka: true

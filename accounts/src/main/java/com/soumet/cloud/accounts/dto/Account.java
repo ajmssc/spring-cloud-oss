@@ -1,32 +1,18 @@
 package com.soumet.cloud.accounts.dto;
-//
-//import javax.persistence.Column;
-//import javax.persistence.Entity;
-//import javax.persistence.Id;
-//import javax.persistence.Table;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-/**
- * Persistent account entity with JPA markup. Accounts are stored in an H2
- * relational database.
- *
- * @author Paul Chapman
- */
-//@Entity
-//@Table(name = "T_ACCOUNT")
 public class Account implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     public static Long nextId = 0L;
 
-//    @Id
     protected Long id;
 
     protected String number;
 
-//    @Column(name = "name")
     protected String owner;
 
     protected BigDecimal balance;

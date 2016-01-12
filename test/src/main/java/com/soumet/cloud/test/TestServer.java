@@ -12,9 +12,11 @@ public class TestServer {
 
 	protected Logger logger = Logger.getLogger(TestServer.class.getName());
 
+    final static long version = Math.round(Math.random() * 65000);
+
 	public static void main(String[] args) {
 		System.setProperty("spring.config.name", "test");
-		System.setProperty("PORT", String.valueOf(Math.round(Math.random() * 65000)));
-		SpringApplication.run(TestServer.class, args);
+		System.setProperty("PORT", String.valueOf(version));
+        SpringApplication.run(TestServer.class, args);
 	}
 }

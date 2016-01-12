@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:2222}
+  port: ${PORT}
 
 spring:
   application:
@@ -9,5 +9,5 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
+      defaultZone: ${EUREKA_URL:http://127.0.0.1:8761}/eureka/
     registerWithEureka: true
